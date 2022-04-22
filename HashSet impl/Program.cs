@@ -19,6 +19,30 @@ namespace HashSet_impl
     }
   }
 
+  public class MyHashSet_Using_BooleanArray
+  {
+    bool[] hash;
+    public MyHashSet_Using_BooleanArray()
+    {
+      hash = new bool[10000000];
+    }
+
+    public void Add(int key)
+    {
+      hash[key] = true;
+    }
+
+    public void Remove(int key)
+    {
+      hash[key] = false;
+    }
+
+    public bool Contains(int key)
+    {
+      return hash[key];
+    }
+  }
+
   public class ListNode
   {
     public int val;
@@ -96,7 +120,6 @@ namespace HashSet_impl
           head = head.next;
         }
         list[index] = head;
-
       }
 
     }
